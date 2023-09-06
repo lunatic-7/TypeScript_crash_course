@@ -20,5 +20,17 @@ var Continents;
     Continents[Continents["Australia"] = 5] = "Australia";
     Continents[Continents["Antarctica"] = 6] = "Antarctica";
 })(Continents || (Continents = {}));
-// usage
 var region = Continents.Africa; // 2
+var user = {
+    name: "John",
+    id: 0,
+}; // Valid
+var windowstates = "open"; // Valid
+// const windowstates2: WindowStates = "I don't know, this is not a window"; // Error: Type "I don't know, this is not a window" is not assignable to type 'WindowStates'.
+var getLength = function (param) {
+    return param.length;
+};
+getLength("test"); // 4
+getLength(["test2", "test"]); // 2
+// But this works fine in JavaScript and gives undefined in return
+// getLength(3); // Error: Argument of type '3' is not assignable to parameter of type 'string | string[]'.
